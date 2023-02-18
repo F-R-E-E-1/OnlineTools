@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onlinetool.dao.UserMapper">
+    <resultMap id="BaseResultMap" type="com.onlinetool.entity.User">
+        <constructor>
+            <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+            <arg column="role" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="password" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="idCard" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="phone" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="gender" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <arg column="entry.time" javaType="java.util.Date" jdbcType="DATE" />
+            <arg column="status" javaType="java.lang.String" jdbcType="VARCHAR" />
+        </constructor>
+    </resultMap>
+    <sql id="Base_column_list">
+        id,role,name,password,idCard,phone,gender,entry.time,status
+    </sql>
+
+</mapper>
