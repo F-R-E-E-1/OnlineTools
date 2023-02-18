@@ -19,5 +19,12 @@
     <sql id="Base_column_list">
         id,role,name,password,idCard,phone,gender,entry.time,status
     </sql>
-
+    <select id="countByUserId" parameterType="int" resultType="java.lang.Integer">
+        select count(1) form user where id = #{id}
+    </select>
+    <select id="selectLogin" resultMap="BaseResultMap" parameterType="map">
+        select
+        <include refid="Base_column_list"></include>
+        form user where id = #{id} and password = #{password}
+    </select>
 </mapper>
